@@ -4,7 +4,6 @@ from pptx import Presentation
 from fastapi.responses import FileResponse
 import uuid
 import os
-from fastapi import FastAPI
 
 app = FastAPI()
 
@@ -34,7 +33,7 @@ def generate_ppt(
     prs.save(filename)
 
     return FileResponse(
-        filename,
+        path=filename,
         media_type="application/vnd.openxmlformats-officedocument.presentationml.presentation",
         filename="result.pptx"
     )
