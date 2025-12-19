@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pandas
+python-pptx
+pdf2image
+Pillow
