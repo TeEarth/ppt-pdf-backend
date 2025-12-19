@@ -4,8 +4,13 @@ from pptx import Presentation
 from fastapi.responses import FileResponse
 import uuid
 import os
+from fastapi import FastAPI
 
 app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"status": "Backend is running on Railway"}
 
 app.add_middleware(
     CORSMiddleware,
