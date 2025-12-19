@@ -4,3 +4,4 @@ pandas
 python-pptx
 pdf2image
 Pillow
+python-multipart
